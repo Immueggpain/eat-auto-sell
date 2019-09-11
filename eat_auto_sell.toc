@@ -1,0 +1,9 @@
+## Interface: 11302
+## Title: 自动卖
+## Version: 1.0.0
+## Notes: Auto sell junks and auto repair and auto destroy upon receive
+## Author: 诶嘿嘿
+## SavedVariables: 
+## SavedVariablesPerCharacter: 
+## DefaultState: enabled
+eat_auto_sell.lua
