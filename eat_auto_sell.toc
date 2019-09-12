@@ -3,6 +3,7 @@
 ## Version: 1.0.0
 ## Notes: Auto sell junks and auto repair and auto destroy upon receive
 ## Author: 诶嘿嘿
+## X-Website: https://github.com/Immueggpain/eat-auto-sell
 ## SavedVariables: 
 ## SavedVariablesPerCharacter: 
 ## DefaultState: enabled
