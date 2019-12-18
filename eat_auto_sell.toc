@@ -1,6 +1,6 @@
-## Interface: 11302
+## Interface: 11303
 ## Title: 自动卖
-## Version: 1.0.0
+## Version: 1.0.1
 ## Notes: Auto sell junks and auto repair and auto destroy upon receive
 ## Author: 诶嘿嘿
 ## X-Website: https://github.com/Immueggpain/eat-auto-sell
