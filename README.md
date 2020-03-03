@@ -1,2 +1,2 @@
-# eat-auto-sell
+# eat_auto_sell
  
