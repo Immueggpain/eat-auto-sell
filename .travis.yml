@@ -1,5 +1,6 @@
 # .travis.yaml
 language: generic
+os: linux
 dist: xenial
 before_install:
     - pyenv versions
