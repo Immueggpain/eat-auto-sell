@@ -20,6 +20,6 @@ before_deploy:
 deploy:
     provider: script
     script: python3 githubrelease.py "eat_auto_sell-$TRAVIS_TAG.zip"
-    skip_cleanup: true
+    cleanup: false
     on:
         tags: true
