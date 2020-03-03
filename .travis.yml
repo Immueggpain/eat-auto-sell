@@ -10,10 +10,10 @@ before_deploy:
     # install PyGithub
     - pip3 install PyGithub
     # download githubrelease.py
-    - wget https://raw.githubusercontent.com/Immueggpain/citools/master/githubrelease.py
     - ls -al
     - cd ..
-    - echo 
+    - wget https://raw.githubusercontent.com/Immueggpain/citools/master/githubrelease.py
+    - ls
     - zip eat_auto_sell-$TRAVIS_TAG.zip eat_auto_sell/
 deploy:
     provider: script
