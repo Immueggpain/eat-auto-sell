@@ -2,4 +2,4 @@
 
 # eat_auto_sell
  
-Auto vendor junk, etc.  
+Wow classic addon. Auto vendor junk, etc.  
