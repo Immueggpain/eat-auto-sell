@@ -14,7 +14,7 @@ before_deploy:
     - cd ..
     - wget https://raw.githubusercontent.com/Immueggpain/citools/master/githubrelease.py
     - ls
-    - zip eat_auto_sell-$TRAVIS_TAG.zip eat_auto_sell/
+    - zip eat_auto_sell-$TRAVIS_TAG.zip eat_auto_sell/*
 deploy:
     provider: script
     script: python3 githubrelease.py "eat_auto_sell-$TRAVIS_TAG.zip"
