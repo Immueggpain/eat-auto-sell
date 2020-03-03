@@ -1,9 +1,10 @@
 ## Interface: 11303
 ## Title: 自动卖
-## Version: 1.0.2
-## Notes: 自动卖垃圾，诶嘿嘿 @睡吧狗命要紧
+## Version: 1.0.7
 ## Author: 睡吧狗命要紧
-## X-Website: https://github.com/Immueggpain/eat-auto-sell
+## Notes: Auto vendor junk, etc. https://github.com/Immueggpain/eat_auto_sell
+## Notes-zhCN: 诶嘿嘿，自动卖垃圾，还有其他功能 @睡吧狗命要紧 https://github.com/Immueggpain/eat_auto_sell
+## X-Website: https://github.com/Immueggpain/eat_auto_sell
 ## SavedVariables: 
 ## SavedVariablesPerCharacter: 
 ## DefaultState: enabled
