@@ -66,6 +66,29 @@ local function destroy_items()
 	end
 end
 
+function autosell_destroy(targetItemName)
+	
+	local character_containers = {0, 1, 2, 3, 4}
+	
+	for _, container in ipairs(character_containers) do
+		local slots = GetContainerNumSlots(container)
+		--if no container, slots is 0
+		for slot = 1, slots do
+			local item_id = GetContainerItemID(container, slot)
+			if item_id ~= nil then
+				local texture, count, locked, quality, readable, lootable, link, isFiltered = GetContainerItemInfo(container, slot)
+				local itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemIcon, itemSellPrice, itemClassID, itemSubClassID, bindType, expacID, itemSetID, isCraftingReagent = GetItemInfo(item_id)
+				local bagType = GetItemFamily(item_id)
+				if itemName == targetItemName then
+					print('found, destroying', targetItemName)
+					PickupContainerItem(container, slot)
+					DeleteCursorItem()
+				end
+			end
+		end
+	end
+end
+
 --local e,m,n,f=EnumerateFrames,MouseIsOver;ChatFrame1:AddMessage("The mouse is over the following frames:");f=e();while f do n=f:GetName();if n and f:IsVisible()and m(f) then ChatFrame1:AddMessage("   - "..n) end f=e(f) end
 
 local function onUpdate(self, elapsed)
