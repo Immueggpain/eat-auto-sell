@@ -1,6 +1,6 @@
-## Interface: 11304
+## Interface: 11305
 ## Title: 自动卖
-## Version: 1.0.8
+## Version: 1.0.9
 ## Author: 睡吧狗命要紧
 ## Notes: Auto vendor junk, etc. https://github.com/Immueggpain/eat_auto_sell
 ## Notes-zhCN: 诶嘿嘿，自动卖垃圾，还有其他功能 @睡吧狗命要紧 https://github.com/Immueggpain/eat_auto_sell
