@@ -1,11 +1,43 @@
 local lastUpdate = 0
 
+local restockItems = {
+	[17031] = {10,1}, --传送符文
+	[17032] = {10,1}, --传送门符文
+	[17020] = {20,1}, --魔粉
+	[21177] = {300,1}, --王者印记
+	[17033] = {10,1}, --神圣符印
+	[13444] = {20,0}, --大蓝 特效法力药水
+}
+
 local function moneyToString(totalMoney)
 	local gold = floor(abs(totalMoney / 10000))
 	local silver = floor(abs(mod(totalMoney / 100, 100)))
 	local copper = floor(abs(mod(totalMoney, 100)))
 	-- wow has shorthand references to the Lua string library
 	return format("%dg %ds %dc", gold, silver, copper)
+end
+
+--restock item if in restockItems table
+local function purchaseIf(item, index)
+	local restockInfo = restockItems[item]
+	if not restockInfo then return end
+	local maxCount = restockInfo[1]
+	local minCount = restockInfo[2]
+	
+	local curCount = GetItemCount(item)
+	if not curCount or curCount<minCount then return end
+	if curCount >= maxCount then return end
+	
+	local need = maxCount - curCount
+	local itemName = GetItemInfo(item)
+	local maxStack = GetMerchantItemMaxStack(index)
+	print('buy', need, itemName, maxStack)
+	
+	while need>0 do
+		local amount=min(maxStack, need)
+		BuyMerchantItem(index, amount)
+		need=need-amount
+	end
 end
 
 local function sell_junk()
@@ -41,6 +73,12 @@ local function sell_junk()
 			RepairAllItems()
 			print('repair costs', moneyToString(cost))
 		end
+	end
+	
+	local numItems = GetMerchantNumItems()
+	for index = 1, numItems do
+		local itemID = GetMerchantItemID(index)
+		purchaseIf(itemID, index)
 	end
 end
 
