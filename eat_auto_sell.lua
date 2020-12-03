@@ -9,6 +9,19 @@ local restockItems = {
 	[13444] = {20,0}, --大蓝 特效法力药水
 }
 
+local function moneyToGSC (rv)  
+  local g = math.floor (rv/10000);
+
+  rv = rv - g*10000;
+
+  local s = math.floor (rv/100);
+
+  rv = rv - s*100;
+
+  local c = rv;
+
+  return g, s, c
+end
 local goldicon    = "|TInterface\\MoneyFrame\\UI-GoldIcon:12:12:4:0|t"
 local silvericon  = "|TInterface\\MoneyFrame\\UI-SilverIcon:12:12:4:0|t"
 local coppericon  = "|TInterface\\MoneyFrame\\UI-CopperIcon:12:12:4:0|t"
@@ -56,7 +69,7 @@ local function purchaseIf(item, index)
 	local need = maxCount - curCount
 	local itemName = GetItemInfo(item)
 	local maxStack = GetMerchantItemMaxStack(index)
-	print(string.format('补充%d个%s，总共%d个。', need, itemName, maxStack))
+	print(string.format('补充%d个%s，总共%d个。', need, itemName, maxCount))
 	
 	while need>0 do
 		local amount=min(maxStack, need)
