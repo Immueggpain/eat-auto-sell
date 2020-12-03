@@ -1,6 +1,6 @@
-## Interface: 11305
+## Interface: 11306
 ## Title: 自动买卖
-## Version: 1.13.5.1
+## Version: 1.13.6.0
 ## Author: 睡吧狗命要紧 (CN-比格沃斯) <黑暗契约>
 ## Notes: 诶嘿嘿，能自动修理、卖垃圾、买施法材料哟~ by 睡吧狗命要紧 (CN-比格沃斯) <黑暗契约> (https://github.com/Immueggpain/eat_auto_sell)
 ## X-Website: https://github.com/Immueggpain/eat_auto_sell
