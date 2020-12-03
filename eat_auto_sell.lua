@@ -31,7 +31,7 @@ local function purchaseIf(item, index)
 	local need = maxCount - curCount
 	local itemName = GetItemInfo(item)
 	local maxStack = GetMerchantItemMaxStack(index)
-	print('buy', need, itemName, maxStack)
+	print(string.format('补充%d个%s，总共%d个。', need, itemName, maxStack))
 	
 	while need>0 do
 		local amount=min(maxStack, need)
